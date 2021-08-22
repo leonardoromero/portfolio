@@ -1,0 +1,78 @@
+@use '../custom' as *;
+@use 'mixins' as *;
+
+.display-2 {
+    margin-bottom: 1rem;
+    @include poppins;
+    &--intro {
+        display: inline-block;
+        font-weight: 700;
+        @include poppins;
+        text-align: center;
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+            text-align: left;
+        }
+    }
+    &--description {
+        font-size: 1.1rem;
+        display: block;
+        margin-top: 1.5rem;
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.3rem;
+            display: inline-block;
+            text-align: left;
+        }
+    }
+}
+
+// HEADING LINE 
+
+.heading-line {
+    &::before {
+        content: "";
+        width: 10rem;
+        height: 0.1rem;
+        display: block;
+        margin: 0 auto;
+        background-color: $primary;
+    }
+    &::after {
+        content: "";
+        width: 2rem;
+        padding-top: 0.5rem;
+        height: 0.2rem;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        background-color: $primary;
+    }
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+// DISPLAY 3
+
+.display-3 {
+    @include poppins;
+    &--title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        @include poppins;
+        display: inline-block;
+        background-image: linear-gradient(to right, $primary, $secondary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+// BORDER RIGHT
+
+.border-right {
+    border-right: 0.1rem solid $gray-300;
+    height: 100%;
+}

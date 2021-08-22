@@ -1,0 +1,19 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.technologies-box {
+    padding: 0 0 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(1rem, 10rem));
+    justify-content: space-evenly;
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(auto-fit, minmax(1rem, 10rem));
+    }
+    img {
+        width: 100%;
+        padding: .5rem;
+        &:hover {
+            filter:grayscale(120);
+        }
+    }
+}
