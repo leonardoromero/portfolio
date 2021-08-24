@@ -1,0 +1,84 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.footer {
+    padding-top: 1rem;
+    background-color: $footer;
+    .contact-box {
+        position: relative;
+        &__icon {
+            width: 2rem;
+            stroke: $primary;
+            @include media-breakpoint-up(sm) {
+                width: 4rem;
+            }
+        }
+        &__info {
+            padding: 0.4rem;
+            font-weight: 500;
+            &--title {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                @include media-breakpoint-up(sm) {
+                    font-size: 1.4rem;
+                }
+            }
+            &--subtitle {
+                color: $gray-600;
+                text-decoration: none;
+                font-size: .8rem;
+                @include media-breakpoint-up(sm) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+}
+
+// SOCIAL MEDIA CONTENT STYLE
+
+.footer-sm {
+    background-color: #212121;
+    margin: 0 auto;
+    a {
+        color:white;
+        i {
+            font-size: 1rem;
+            margin-left: 1rem;
+            @include media-breakpoint-up(sm) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+// FOOTER BOTTOM STYLE
+
+.footer-bottom {
+    background-color: black;
+    &__copyright {
+        color: $gray-600;
+        font-weight: 400;
+        a {
+            color: $gray-300;
+            text-decoration: none;
+        }
+    }
+}
+
+// BACK TO TOP BUTTON {
+.back-to-top {
+    position: fixed;
+    width: 2.5rem;
+    height: 2.5rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 9999;
+    i {
+        color: white;
+        font-size: 1rem;
+        @include absoluteCenter;
+    }
+}
