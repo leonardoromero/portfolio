@@ -1,0 +1,36 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#servicios {
+    @include media-breakpoint-up(sm) {
+        margin-top: -3rem;
+    }
+    @include media-breakpoint-up(md) {
+        margin-top: -5rem;
+    }
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.presupuestador__servicio {
+    border: 2px solid $primary;
+    border-radius: .5rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    &--titulo {
+        font-weight: 700;
+    }
+    &:hover {
+        color: white;
+        @include gradient;
+        border: 2px solid white;
+    }
+}
+
+.presupuestador__servicio--selected {
+    color: white;
+    @include gradient;
+    border: 2px solid white;
+}

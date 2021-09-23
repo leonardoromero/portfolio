@@ -11177,6 +11177,18 @@ textarea.form-control-lg {
     text-align: left;
   }
 }
+.display-2--presupuesto {
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .display-2--presupuesto {
+    padding-top: 2rem;
+  }
+}
 
 .heading-line::before {
   content: "";
@@ -11288,6 +11300,44 @@ h4 {
 }
 .services__content__pic {
   max-width: 100%;
+}
+
+#servicios {
+  padding: 1rem;
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+  #servicios {
+    margin-top: -3rem;
+  }
+}
+@media (min-width: 768px) {
+  #servicios {
+    margin-top: -5rem;
+  }
+}
+
+.presupuestador__servicio {
+  border: 2px solid #9926f0;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.presupuestador__servicio--titulo {
+  font-weight: 700;
+}
+.presupuestador__servicio:hover {
+  color: white;
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  border: 2px solid white;
+}
+
+.presupuestador__servicio--selected {
+  color: white;
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  border: 2px solid white;
 }
 
 .portfolio {
