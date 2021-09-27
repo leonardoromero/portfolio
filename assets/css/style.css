@@ -11302,19 +11302,52 @@ h4 {
   max-width: 100%;
 }
 
-#servicios {
+.container__presupuestador {
+  display: flex;
+}
+.container__presupuestador #servicios {
   padding: 1rem;
   margin: 0 auto;
+  width: 60%;
 }
 @media (min-width: 576px) {
-  #servicios {
+  .container__presupuestador #servicios {
     margin-top: -3rem;
   }
 }
 @media (min-width: 768px) {
-  #servicios {
+  .container__presupuestador #servicios {
     margin-top: -5rem;
   }
+}
+.container__presupuestador #presupuesto {
+  width: 30%;
+  background: black;
+  color: white;
+  padding: 1.5rem;
+  height: max(300px, 100%);
+  background: linear-gradient(-135deg, black 5px, transparent 0) 0 5px, linear-gradient(135deg, black 5px, #fff 0) 0 5px;
+  background-color: black;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 10px 10px;
+}
+.container__presupuestador #presupuesto h3 {
+  text-align: center;
+}
+.container__presupuestador #presupuesto #total {
+  text-align: right;
+  border-top: 1px double white;
+  padding-top: 1rem;
+}
+.container__presupuestador #presupuesto__items {
+  padding: 2rem 0;
+}
+.container__presupuestador #presupuesto__items > * {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem;
 }
 
 .presupuestador__servicio {
@@ -11332,12 +11365,38 @@ h4 {
   color: white;
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
   border: 2px solid white;
+  cursor: pointer;
 }
 
 .presupuestador__servicio--selected {
   color: white;
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
   border: 2px solid white;
+}
+
+#clear-btn,
+#contact-btn {
+  margin: 0.5rem;
+  width: 100%;
+}
+
+#clear-btn {
+  margin-top: 1rem;
+}
+#clear-btn:hover {
+  background: black;
+  color: white;
+}
+
+#contact-btn {
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  color: white;
+}
+#contact-btn span {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#contact-btn:hover {
+  filter: drop-shadow(2px 2px 30px #9926f0);
 }
 
 .portfolio {

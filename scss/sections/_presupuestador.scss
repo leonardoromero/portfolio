@@ -1,15 +1,51 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
-#servicios {
-    @include media-breakpoint-up(sm) {
-        margin-top: -3rem;
+.container__presupuestador {
+    display: flex;
+    #servicios {
+        @include media-breakpoint-up(sm) {
+            margin-top: -3rem;
+        }
+        @include media-breakpoint-up(md) {
+            margin-top: -5rem;
+        }
+        padding: 1rem;
+        margin: 0 auto;
+        width: 60%;
     }
-    @include media-breakpoint-up(md) {
-        margin-top: -5rem;
+    #presupuesto {
+        width: 30%;
+        background: black;
+        color: white;
+        padding: 1.5rem;
+        height: max(300px, 100%);
+        
+        background:
+            linear-gradient(-135deg, black 5px, transparent 0) 0 5px,
+            linear-gradient(135deg, black 5px, #fff 0) 0 5px;
+        background-color: black;
+        background-position: left bottom;
+        background-repeat: repeat-x;
+        background-size: 10px 10px;
+        h3 {
+            text-align: center;
+        }
+        #total {
+            text-align: right;
+            border-top: 1px double white;
+            padding-top: 1rem;
+        }
+        &__items {
+            padding: 2rem 0;
+            > * {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                padding: .5rem;
+            }
+        }
     }
-    padding: 1rem;
-    margin: 0 auto;
 }
 
 .presupuestador__servicio {
@@ -26,6 +62,7 @@
         color: white;
         @include gradient;
         border: 2px solid white;
+        cursor: pointer;
     }
 }
 
@@ -33,4 +70,29 @@
     color: white;
     @include gradient;
     border: 2px solid white;
+}
+
+#clear-btn,
+#contact-btn {
+    margin: .5rem;
+    width: 100%;
+}
+
+#clear-btn {
+    margin-top: 1rem;
+    &:hover {
+        background: black;
+        color: white;
+    }
+}
+
+#contact-btn {
+    @include gradient;
+        color: white;
+        span {
+            background-color: rgba(black, 0.6);
+        }
+    &:hover {
+        filter: drop-shadow(2px 2px 30px $primary);
+    }
 }
