@@ -2,6 +2,7 @@
 
 //IMPORT THE COMPONENTS
 @use 'components/animations';
+@use 'components/scrollbar';
 @use 'components/buttons';
 @use 'components/mixins';
 @use 'components/typography';
@@ -16,4 +17,5 @@
 @use 'sections/portfolio';
 @use 'sections/get-started';
 @use 'sections/footer';
+
 

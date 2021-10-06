@@ -11112,6 +11112,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  border: 1.5px solid white;
+  border-radius: 50px;
+}
+
 .btn-rounded {
   position: relative;
   padding: 0.9375rem 4.375rem 0.9375rem 1.25rem;
@@ -11304,6 +11314,7 @@ h4 {
 
 .container__presupuestador {
   display: flex;
+  align-items: flex-start;
 }
 .container__presupuestador #servicios {
   padding: 1rem;
@@ -11317,7 +11328,7 @@ h4 {
 }
 @media (min-width: 768px) {
   .container__presupuestador #servicios {
-    margin-top: -5rem;
+    margin-top: -7rem;
   }
 }
 .container__presupuestador #presupuesto {
@@ -11346,6 +11357,7 @@ h4 {
 .container__presupuestador #presupuesto__items > * {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   padding: 0.5rem;
 }
