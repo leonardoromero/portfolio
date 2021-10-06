@@ -1,1 +1,1 @@
-#[Página hosteada](https://leonardoromero.github.io/portfolio/presupuestador.html#)
+[Página hosteada](https://leonardoromero.github.io/portfolio/presupuestador.html#)
