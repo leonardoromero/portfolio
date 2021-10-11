@@ -11331,8 +11331,15 @@ h4 {
     margin-top: -7rem;
   }
 }
+.container__presupuestador #servicios button {
+  color: white;
+  border: 1px solid white;
+}
+.container__presupuestador #servicios button:hover {
+  filter: drop-shadow(0 0 5px #fff);
+}
 .container__presupuestador #presupuesto {
-  width: 30%;
+  width: 35%;
   background: black;
   color: white;
   padding: 1.5rem;
@@ -11355,11 +11362,13 @@ h4 {
   padding: 2rem 0;
 }
 .container__presupuestador #presupuesto__items > * {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   padding: 0.5rem;
+  display: none;
+}
+.container__presupuestador #presupuesto__items .precio {
+  margin-left: auto;
 }
 
 .presupuestador__servicio {
@@ -11372,15 +11381,9 @@ h4 {
 }
 .presupuestador__servicio--titulo {
   font-weight: 700;
+  align-self: center;
 }
 .presupuestador__servicio:hover {
-  color: white;
-  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
-  border: 2px solid white;
-  cursor: pointer;
-}
-
-.presupuestador__servicio--selected {
   color: white;
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
   border: 2px solid white;
@@ -11409,6 +11412,13 @@ h4 {
 }
 #contact-btn:hover {
   filter: drop-shadow(2px 2px 30px #9926f0);
+}
+
+button.btn.btn-minus {
+  color: white;
+}
+button.btn.btn-minus :hover {
+  color: #9926f0;
 }
 
 .portfolio {

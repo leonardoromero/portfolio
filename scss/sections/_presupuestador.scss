@@ -14,9 +14,16 @@
         padding: 1rem;
         margin: 0 auto;
         width: 60%;
+        button {
+            color: white;
+            border: 1px solid white;
+            &:hover {
+                filter: drop-shadow(0 0 5px $white)
+            }
+        }
     }
     #presupuesto {
-        width: 30%;
+        width: 35%;
         background: black;
         color: white;
         padding: 1.5rem;
@@ -40,11 +47,13 @@
         &__items {
             padding: 2rem 0;
             > * {
-                display: flex;
-                justify-content: space-between;
                 align-items: center;
                 gap: 1rem;
                 padding: .5rem;
+                display: none;
+            }
+            .precio {
+                margin-left: auto;
             }
         }
     }
@@ -59,20 +68,15 @@
     justify-content: space-between;
     &--titulo {
         font-weight: 700;
+        align-self: center;
     }
     &:hover {
         color: white;
         @include gradient;
         border: 2px solid white;
-        cursor: pointer;
     }
 }
 
-.presupuestador__servicio--selected {
-    color: white;
-    @include gradient;
-    border: 2px solid white;
-}
 
 #clear-btn,
 #contact-btn {
@@ -96,5 +100,12 @@
         }
     &:hover {
         filter: drop-shadow(2px 2px 30px $primary);
+    }
+}
+
+button.btn.btn-minus {
+    color: white;
+    :hover {
+        color: $primary;
     }
 }
