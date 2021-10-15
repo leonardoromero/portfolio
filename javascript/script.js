@@ -100,3 +100,14 @@ $('#clear-btn').on('click', () => {
     }
 });
 
+let URL = 'http://hp-api.herokuapp.com/api/characters';
+
+$.get(URL, function(respuesta, estado) {
+    if(estado === 'success'){
+        let personajes = respuesta;
+        $('#tituloPresupuesto').html(`Este es tu presupuesto, ${personajes[random(0,25)].name} 🪄✨`)
+    }
+})
+
+const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
