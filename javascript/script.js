@@ -3,7 +3,6 @@ let total = 0;
 
 // Event listener para mostrar en el presupuesto cada servicio seleccionado, y a su vez los almacena en el localStorage. 
 // Si ya existe en el localStorage solo le suma a propiedad cantidad
-
 $('.btn-secondary').on('click', (e) => {
     // Extrae el código de producto del id que encuentra en el target del evento
     let index = (e.target.id).slice(-1)-1;
@@ -57,9 +56,7 @@ if(localStorage.length != 0){
 $('#clear-btn').on('click', () => {
     localStorage.clear();
     location.reload();
-    for(let i = 0; i < servicios.length; i++){
-        servicios[i].cantidad = 0;
-    }
+    servicios.forEach(servicio => servicio.cantidad = 0)
 });
 
 // Renderizado del mapa con API de Google Maps
