@@ -11223,6 +11223,10 @@ h4 {
   font-size: 2rem;
 }
 
+.cta-info > p {
+  font-size: 1.1rem;
+}
+
 .display-3 {
   font-family: "Poppins", sans-serif;
 }
@@ -11285,30 +11289,36 @@ h4 {
   filter: grayscale(120);
 }
 
-.services {
+.services,
+.BA {
   position: relative;
   padding: 1rem 0;
 }
-.services__content {
+.services__content,
+.BA__content {
   padding: 1rem;
   margin-top: 0;
 }
 @media (min-width: 992px) {
-  .services__content {
+  .services__content,
+.BA__content {
     margin-top: 5rem;
   }
 }
-.services__content .icon {
+.services__content .icon,
+.BA__content .icon {
   font-size: 1.5rem;
   color: #9926f0;
   padding-right: 1rem;
 }
 @media (min-width: 992px) {
-  .services__content .icon {
+  .services__content .icon,
+.BA__content .icon {
     ont-size: 2.5rem;
   }
 }
-.services__content__pic {
+.services__content__pic,
+.BA__content__pic {
   max-width: 100%;
 }
 
@@ -11463,6 +11473,7 @@ button.btn.btn-minus :hover {
   opacity: 1;
   visibility: visible;
   transition: 200ms;
+  color: white;
 }
 .portfolio-box:hover img {
   transform: scale(1.5);
@@ -11523,6 +11534,9 @@ button.btn.btn-minus :hover {
   padding: 0.4rem;
   font-weight: 500;
 }
+.footer .contact-box__info a:hover {
+  color: #9926f0;
+}
 .footer .contact-box__info--title {
   color: white;
   text-decoration: none;
@@ -11550,15 +11564,23 @@ button.btn.btn-minus :hover {
 }
 .footer-sm a {
   color: white;
+  transition: transform 0.2s;
+}
+.footer-sm a :hover {
+  transform: scale(1.5);
+  transition: transform 0.2s;
 }
 .footer-sm a i {
-  font-size: 1rem;
-  margin-left: 1rem;
+  font-size: 1.6rem;
+  margin-left: 1.2rem;
 }
 @media (min-width: 576px) {
   .footer-sm a i {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
+}
+.footer-sm .follow-me {
+  align-self: center;
 }
 
 .footer-bottom {

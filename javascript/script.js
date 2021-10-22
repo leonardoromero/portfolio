@@ -43,9 +43,9 @@ if(localStorage.length != 0){
         total += JSON.parse(localStorage.getItem(clave)).precio * JSON.parse(localStorage.getItem(clave)).cantidad;
         $('#total').html(`Total $${total}`);
 
-        $(`#presupuesto__items__item-${i}`).css('display', 'flex');
-        $(`#presupuesto__items--cantidad-${i}`).html(`${JSON.parse(localStorage.getItem(clave)).cantidad}`);
-        $(`#presupuesto__items--precio-${i}`).html(`$${JSON.parse(localStorage.getItem(clave)).cantidad * JSON.parse(localStorage.getItem(clave)).precio}`);
+        $(`#presupuesto__items__item-${JSON.parse(localStorage.getItem(clave)).codigo-1}`).css('display', 'flex');
+        $(`#presupuesto__items--cantidad-${JSON.parse(localStorage.getItem(clave)).codigo-1}`).html(`${JSON.parse(localStorage.getItem(clave)).cantidad}`);
+        $(`#presupuesto__items--precio-${JSON.parse(localStorage.getItem(clave)).codigo-1}`).html(`$${JSON.parse(localStorage.getItem(clave)).cantidad * JSON.parse(localStorage.getItem(clave)).precio}`);
     
     }
 } else {

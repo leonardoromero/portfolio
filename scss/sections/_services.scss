@@ -1,6 +1,7 @@
 @use '../custom' as *;
 
-.services {
+.services,
+.BA {
     position: relative;
     padding: 1rem 0;
     &__content {
